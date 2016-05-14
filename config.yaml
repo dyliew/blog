@@ -1,0 +1,23 @@
+baseurl: "http://www.dyliew.com/blog/"
+languageCode: "en-us"
+title: "DYLiew's Blog"
+theme: "hyde"
+permalinks:
+  post: /:year/:month/:title/
+params:
+  layoutReverse: false
+  themeColor: "theme-base-0c"
+  disqusShortname: "dyliew"
+  description: "Blog site of DY Liew"
+menu:
+  main:
+      - Name: "Home"
+        Pre: "<i class='fa fa-home'></i>"
+        Weight: -120
+        Identifier: "home"
+        URL: "/"
+      - Name: "Random"
+        Pre: "<i class='fa fa-random'></i>"
+        Weight: -110
+        Identifier: "random"
+        URL: "/Random/"

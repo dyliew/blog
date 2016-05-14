@@ -1,0 +1,19 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <div>
+        <img id="myimage" src="https://avatars1.githubusercontent.com/u/8407651">
+      </div>
+      <a href="{{ .Site.BaseURL }}"><h1>My Blog</h1></a>
+      <p class="lead">
+      {{ .Site.Params.description }}. Powered by <a href="http://hugo.spf13.com">hugo</a> and <a href="https://github.com/spf13/hyde">Hyde</a>.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      {{ range .Site.Menus.main }}
+        <li><a href="{{.URL}}"> {{ .Pre }} {{ .Name }} </a></li>
+      {{end}}
+    </ul>
+  </div>
+</div>

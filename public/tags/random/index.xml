@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Random on DYLiew&#39;s Blog</title>
+    <link>http://www.dyliew.com/blog/tags/random/</link>
+    <description>Recent content in Random on DYLiew&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 May 2016 20:28:38 +1000</lastBuildDate>
+    <atom:link href="http://www.dyliew.com/blog/tags/random/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://www.dyliew.com/blog/random/first/</link>
+      <pubDate>Sat, 14 May 2016 20:28:38 +1000</pubDate>
+      
+      <guid>http://www.dyliew.com/blog/random/first/</guid>
+      <description>&lt;p&gt;This is my first post. Nothing much to see here.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll add more content in the future after I&amp;rsquo;ve hosted this on &lt;a href=&#34;http://github.com&#34;&gt;GitHub&lt;/a&gt; &lt;a href=&#34;https://pages.github.com/&#34;&gt;Pages&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
