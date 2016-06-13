@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on DYLiew&#39;s Blog</title>
+    <link>http://www.dyliew.com/blog/categories/development/</link>
+    <description>Recent content in Development on DYLiew&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 May 2016 00:10:38 +1000</lastBuildDate>
+    <atom:link href="http://www.dyliew.com/blog/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>First deploy to Github Pages using Wercker</title>
+      <link>http://www.dyliew.com/blog/development/first-deploy-to-github-pages-using-wercker/</link>
+      <pubDate>Sun, 15 May 2016 00:10:38 +1000</pubDate>
+      
+      <guid>http://www.dyliew.com/blog/development/first-deploy-to-github-pages-using-wercker/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve finally deployed this blog site to &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt; using &lt;a href=&#34;http://wercker.com/&#34;&gt;Wercker&lt;/a&gt; (which means any new things I add will be available on the blog site in no time). The url to this blog site is &lt;a href=&#34;http://www.dyliew.com/blog&#34;&gt;http://www.dyliew.com/blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, it took me a few hours to successfully do this. My first attempt was a failure as almost everything was deployed the my repository&amp;rsquo;s &lt;em&gt;gh-pages&lt;/em&gt; branch but things in the &lt;em&gt;static&lt;/em&gt; folder (e.g. &lt;em&gt;css&lt;/em&gt;, &lt;em&gt;js&lt;/em&gt; and &lt;em&gt;fonts&lt;/em&gt;). It annoyed me a lot and I thought I did follow everything written in the &lt;a href=&#34;https://gohugo.io/tutorials/automated-deployments/&#34;&gt;instruction&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I took a short break and created an exact copy of what have written in the instruction. After reconfiguring everything from GitHub to Wercker, everything worked for the copy and then I noticed something. I might have missed this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;User-agent: *\nDisallow:&amp;quot; &amp;gt; static/robots.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and I forgot to remove &lt;em&gt;.git&lt;/em&gt; folder in the theme I cloned.&lt;/p&gt;
+
+&lt;p&gt;I then removed everything related to the blog site from GitHub and Wercker and restarted the process from scratch. Finally, it worked!&lt;/p&gt;
+
+&lt;p&gt;I have a lot of todos in this blog site like setting up &lt;strong&gt;https&lt;/strong&gt; and proper &lt;strong&gt;404&lt;/strong&gt; page, &lt;strong&gt;tags&lt;/strong&gt;, &lt;strong&gt;categories&lt;/strong&gt;, &lt;strong&gt;search&lt;/strong&gt;, etc. Hopefully I will be really motivated to do them in my free time.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://www.dyliew.com/blog/random/first/</link>
+      <pubDate>Sat, 14 May 2016 20:28:38 +1000</pubDate>
+      
+      <guid>http://www.dyliew.com/blog/random/first/</guid>
+      <description>&lt;p&gt;This is my first post. Nothing much to see here.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll add more content in the future after I&amp;rsquo;ve hosted this on &lt;a href=&#34;http://github.com&#34;&gt;GitHub&lt;/a&gt; &lt;a href=&#34;https://pages.github.com/&#34;&gt;Pages&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,106 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.15" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> First deploy to Github Pages using Wercker &middot; DYLiew&#39;s Blog </title>
+  
+
+  
+  <link rel="stylesheet" href="http://www.dyliew.com/blog/css/poole.css">
+  <link rel="stylesheet" href="http://www.dyliew.com/blog/css/syntax.css">
+  <link rel="stylesheet" href="http://www.dyliew.com/blog/css/hyde.css">
+  <link rel="stylesheet" href="http://www.dyliew.com/blog/css/font-awesome.css">
+  <link rel="stylesheet" href="http://www.dyliew.com/blog/css/site.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="DYLiew&#39;s Blog" />
+</head>
+
+	<body class="theme-base-0c">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <div>
+        <h2>
+          <a href="https://github.com/dyliew"><i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="http://twitter.com/dyliew"><i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://au.linkedin.com/in/dao-yang-liew-4a686578"><i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </h2>
+      </div>
+      <div>
+        <img id="myimage" src="https://avatars1.githubusercontent.com/u/8407651">
+      </div>
+      <a href="http://www.dyliew.com/blog/"><h1>My Blog</h1></a>
+      <p class="lead">
+        Blog site of DY Liew. Powered by <a href="http://hugo.spf13.com">hugo</a> and <a href="https://github.com/spf13/hyde">Hyde</a>.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+      <li><a href="/blog/"> <i class='fa fa-home'></i> Home </a></li>
+      
+      <li><a href="/blog/development/"> <i class='fa fa-wrench'></i> Development </a></li>
+      
+      <li><a href="/blog/random/"> <i class='fa fa-random'></i> Random </a></li>
+      
+    </ul>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>First deploy to Github Pages using Wercker</h1>
+			  <span class="post-date">Sun, May 15, 2016</span>
+			      <p>I&rsquo;ve finally deployed this blog site to <a href="https://pages.github.com/">Github Pages</a> using <a href="http://wercker.com/">Wercker</a> (which means any new things I add will be available on the blog site in no time). The url to this blog site is <a href="http://www.dyliew.com/blog">http://www.dyliew.com/blog</a>.</p>
+
+<p>However, it took me a few hours to successfully do this. My first attempt was a failure as almost everything was deployed the my repository&rsquo;s <em>gh-pages</em> branch but things in the <em>static</em> folder (e.g. <em>css</em>, <em>js</em> and <em>fonts</em>). It annoyed me a lot and I thought I did follow everything written in the <a href="https://gohugo.io/tutorials/automated-deployments/">instruction</a>.</p>
+
+<p>I took a short break and created an exact copy of what have written in the instruction. After reconfiguring everything from GitHub to Wercker, everything worked for the copy and then I noticed something. I might have missed this</p>
+
+<pre><code>echo &quot;User-agent: *\nDisallow:&quot; &gt; static/robots.txt
+</code></pre>
+
+<p>and I forgot to remove <em>.git</em> folder in the theme I cloned.</p>
+
+<p>I then removed everything related to the blog site from GitHub and Wercker and restarted the process from scratch. Finally, it worked!</p>
+
+<p>I have a lot of todos in this blog site like setting up <strong>https</strong> and proper <strong>404</strong> page, <strong>tags</strong>, <strong>categories</strong>, <strong>search</strong>, etc. Hopefully I will be really motivated to do them in my free time.</p>
+
+			</div>
+
+			
+				<h2>Comments</h2>
+				<div id="disqus_thread"></div>
+<script type="text/javascript">
+     
+    var disqus_shortname = 'dyliew'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+			
+		</div>
+
+  </body>
+</html>
