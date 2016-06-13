@@ -7,9 +7,9 @@ build:
         flags: --buildDrafts=true
 deploy:
   steps:
-    - chikei-development/install-packages@0.0.15:
+    - install-packages:
         packages: git ssh-client
-    - giovanni/gh-pages@0.2.2:
+    - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
         domain: blog.dyliew.com
         basedir: public
