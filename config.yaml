@@ -1,4 +1,4 @@
-baseurl: "http://www.dyliew.com/blog/"
+baseurl: "http://blog.dyliew.com/"
 languageCode: "en-us"
 title: "DYLiew's Blog"
 theme: "hyde"
