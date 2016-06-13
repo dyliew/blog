@@ -9,7 +9,7 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-    - gh-pages:
+    - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
-        domain: blog.dyliew.com
+        domain: hugo-wercker.ig.nore.me
         basedir: public
