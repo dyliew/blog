@@ -1,4 +1,4 @@
-name: Continuos Integration
+name: Build and Deploy
 
 on:
   push:
@@ -9,12 +9,23 @@ on:
       - master
 
 jobs:
-  lint_build:
-    name: Lint & Build
+  build-and-deploy:
+    name: Build & Deploy
     runs-on: ubuntu-latest
-    continue-on-error: false
     steps:
-      - uses: actions/checkout@v2
-      - uses: enriikke/gatsby-gh-pages-action@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
         with:
-          access-token: ${{ secrets.ACCESS_TOKEN_BLOG }}
+          persist-credentials: false
+
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          yarn install
+          yarn build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN_BLOG }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: public # The folder the action should deploy.
