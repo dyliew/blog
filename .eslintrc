@@ -1,0 +1,6 @@
+{
+  "extends": "seek",
+  "rules": {
+    "linebreak-style": "off"
+  }
+}
